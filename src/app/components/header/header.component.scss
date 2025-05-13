@@ -1,0 +1,94 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.95);
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    .container {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+      margin: auto;
+      padding: 0 20px;
+  
+      .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 10vh;
+        position: relative;
+  
+        .logo h1 {
+          font-weight: 700;
+          font-size: 30px;
+          font-family: 'Audiowide', cursive;
+          background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          color: transparent;
+        }
+  
+        .burger {
+          display: none;
+          font-size: 28px;
+          cursor: pointer;
+          color: var(--primary-color);
+        }
+  
+        .nav {
+          display: flex;
+          justify-content: center;
+          flex-grow: 1;                                                                                      
+  
+          .list {
+            list-style: none;
+            display: flex;
+            gap: 80px;
+  
+            .link {
+              font-size: 20px;
+              text-decoration: none;
+              color: var(--accent-color);
+              font-weight: 600;
+            }
+            .link:hover{
+                color:var(--secondary-color);
+            }
+          }
+  
+          // Default hide on mobile
+          @media (max-width: 768px) {
+            display: none;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+  
+            .list {
+              flex-direction: column;
+              align-items: center;
+              padding: 20px 0;
+              gap: 15px;
+            }
+  
+            &.active {
+              display: block !important;
+            }
+          }
+        }
+  
+        @media (max-width: 768px) {
+          .burger {
+            display: block;
+          }
+  
+          // Hide nav by default, show with .active
+          .nav {
+            display: none;
+          }
+        }
+      }
+    }
+ 
+  }
+

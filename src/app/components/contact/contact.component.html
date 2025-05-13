@@ -1,0 +1,24 @@
+<div class="contact-tab">
+	<div class="top container">
+		<div class="title">{{contactSection.title}}</div>
+		<div class="content">{{contactSection.content}}</div>
+		<div class="form-section">
+			<div class="image-section">
+				<img [src]="contactSection.image" alt="hello" width="100">
+				<div *ngFor="let contact of contactSection.contact;" class="information">
+				<i [class]="contact.icon"></i>
+					<div class="name">{{contact.name}}</div>
+				</div>
+			</div>
+			<div class="tab">
+				<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+					<input type="text" [placeholder]="contactSection.form.name" formControlName="name" />
+					<input type="email" [placeholder]="contactSection.form.email" formControlName="email" />
+					<textarea rows="4" [placeholder]="contactSection.form.message" formControlName="message"></textarea>
+					<button type="submit" class="btn-primary">{{contactSection.form.action}}</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="bottom"></div>
+</div>

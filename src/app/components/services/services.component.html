@@ -1,0 +1,19 @@
+<div class="container serice-tab">
+    <div class="title">{{servicesData.title}}</div>
+    <div class="tagline">{{servicesData.tagline}}</div>
+    <div class="service-content">
+
+
+    <div *ngFor="let service of servicesData.services;" class="tab">
+
+        <div class="name">
+            {{service.name}}
+        </div>
+        <img [src]="service.image" alt="service-images" class="tab-images">
+        <div class="description">
+            {{service.content}}
+        </div>
+
+    </div>
+</div>
+</div>

@@ -1,0 +1,26 @@
+<div class="home-background ">
+	<div class="right-circle"></div>
+	<div class="left-circle"></div>
+	<div class="content">
+		<div class="main">{{homeProfile.company_name}}</div>
+		<div class="description">
+			{{homeProfile.description}}
+		</div>
+		<div class="tagline" *ngIf="homeProfile?.taglines?.length">
+			{{ homeProfile.taglines[currentIndex] }}
+		</div>
+		
+		  
+		<button class="btn-primary">
+			{{homeProfile.action}}
+		</button>
+	</div>
+
+	<div class="grid-patch">
+		<div 
+		*ngFor="let dot of square; let i = index" 
+		class="square" 
+		>
+	  </div>
+	  </div>
+</div>

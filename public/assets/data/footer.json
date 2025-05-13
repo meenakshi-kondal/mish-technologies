@@ -1,0 +1,42 @@
+{
+	"title": "mish-technologies",
+	"slogan": "Our Dreams",
+	"tagline": "Crafting powerful digital experiences that inspire, engage, and drive growth.",
+	"quick_links": [
+		{
+			"name": "About Us",
+			"path": ""
+		},
+		{
+			"name": "Services",
+			"path": ""
+		},
+		{
+			"name": "Contact",
+			"path": ""
+		}
+	],
+	"social_media": [
+		{
+			"icon": "bx bxl-instagram",
+			"path": ""
+		},
+		{
+			"icon": "bx bxl-linkedin",
+			"path": ""
+		},
+		{
+			"icon": "bx bxl-facebook",
+			"path": ""
+		},
+		{
+			"icon": "bx bxl-twitter",
+			"path": ""
+		},
+		{
+			"icon": "bx bx-dots-horizontal-rounded",
+			"path": ""
+		}
+	],
+	"copyright": "© 2025 Mish Technologies. All Rights Reserved"
+}

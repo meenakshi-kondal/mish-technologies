@@ -1,0 +1,23 @@
+<header class="header">
+    <div class="container">
+      <div class="content">
+        <div class="logo">
+          <h1>mish-technologies</h1>
+        </div>
+  
+        <!-- Burger Menu for Mobile -->
+        <div class="burger" (click)="toggleMenu()">
+          ☰
+        </div>
+  
+        <!-- Nav Menu -->
+        <nav class="nav" [ngClass]="{'active': menuOpen}">
+          <ul class="list">
+            <li class="item"><a href="#about" class="link" (click)="closeMenu()">About</a></li>
+            <li class="item"><a href="#skill" class="link" (click)="closeMenu()">Services</a></li>
+            <li class="item"><a href="#project" class="link" (click)="closeMenu()">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>

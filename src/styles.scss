@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+:root {
+    --primary-color: #2C3E50;
+    --accent-color: #FF6F61;
+    --secondary-color: #1ABC9C;
+    --background-color: #F8F9FA;
+    --text-color: #333333;
+    --highlight-color: #F1C40F;
+    --font-hedaing: 'Poppins', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+    --medium-text:25px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body);
+    // overflow: hidden;    
+
+}
+.container {
+    padding:30px;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color:white;
+    padding:10px 20px;
+    border: none;
+    border-radius:8px;
+    font-family: var(--font-hedaing);
+    transition: background-color 0.3s ease;
+    font-size:var(--medium-text);
+    font-weight:600;
+}
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+}

@@ -1,0 +1,21 @@
+{
+    "title":"Our Services",
+    "tagline":"Tech That Works. Designs That Wow. Systems That Last.",
+    "services":[
+        {
+            "name":"Development",
+            "image":"assets/images/development.png",
+            "content":"We specialize in developing robust, scalable, and secure digital solutions tailored to your business goals. From custom software and web applications to mobile app development and backend systems, we ensure smooth functionality, seamless integration, and long-term performance support"
+        },
+        {
+            "name":"Designing",
+            "image":"assets/images/desgining.png",
+            "content":"Our design team focuses on creating visually appealing and user-friendly interfaces that reflect your brand identity. Whether it's UI/UX design, website layouts, mobile app designs, or complete branding packages, we ensure your digital presence is both attractive and intuitive across all devices"
+        },
+        {
+            "name":"System Maintaining",
+            "image":"assets/images/maintain.png",
+            "content":"We offer professional system maintenance and physical cleaning services to keep your devices running efficiently. This includes internal dust cleaning, virus and malware removal, software updates, system optimization, and general troubleshooting to extend the life and performance of your hardware"
+        }
+    ]
+}

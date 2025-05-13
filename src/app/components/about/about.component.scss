@@ -1,0 +1,154 @@
+.container {
+	position: relative;
+	background-color: var(--background-color);
+
+	.left-box {
+		position: absolute;
+		left: 9%;
+		top: 8%;
+		width: 630px;
+		height: 330px;
+		background: var(--primary-color);
+		opacity: 0.1;
+		z-index: 0;
+		filter: blur(3px);
+	}
+
+}
+
+.about-us {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+	max-width: 1200px;
+	margin: auto;
+	position: relative;
+
+	.content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		h1 {
+			color:var(--text-color);
+			font-size: 4rem;
+			margin-bottom: 20px;
+		}
+
+		.description {
+			font-size: 16px;
+			line-height: 1.6;
+			color: var(--text-color);
+			margin-bottom: 10px;
+
+		}
+
+		.first {
+			font-weight: 600;
+		}
+
+		.highlight {
+			font-weight: 600;
+			font-size: 2rem;
+		}
+
+	}
+
+	.layout {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+
+		.circle-container {
+			position: relative;
+			width: 300px;
+			height: 300px;
+		}
+
+		.circle {
+			position: absolute;
+			width: 250px;
+			height: 250px;
+			border-radius: 50%;
+			opacity: 0.6;
+		}
+
+		.circle1 {
+			background-color: var(--primary-color);
+			top: 0;
+			right: 20%;
+		}
+
+		.circle2 {
+			background-color: var(--secondary-color);
+			top: 0;
+			left: 50%
+		}
+
+		.circle3 {
+			background-color: var(--accent-color);
+			top: 50%;
+			transform: translateX(30%);
+		}
+
+		.center-image {
+			position: absolute;
+			top: 50%;
+			left: 65%;
+			border-radius: 50%;
+			object-fit: cover;
+			transform: translate(-50%, -50%);
+			z-index: 10;
+		}
+
+	}
+
+	.second {
+		justify-content: end;
+		padding-bottom: 10%;
+		.btn-primary {
+			margin-top:20px;
+		}
+	}
+
+	.right-box {
+		position: absolute;
+		width: 230px;
+		height: 150px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		opacity: 0.1;																																																																																													
+		z-index: 0;
+		filter: blur(3px);
+	}
+
+	.box-1 {
+		background: var(--highlight-color);
+		transform: rotate(0deg);
+		top: 35%;
+		left: 50%;
+	}
+
+	.box-2 {
+		background: var(--accent-color);
+		transform: rotate(0deg);
+		top: 35%;
+		left: 66%;
+	}
+
+	.box-3 {
+		background: var(--secondary-color);
+		transform: rotate(0deg);
+		top: 35%;
+		left: 82%;
+	}
+
+}
+
+@media (max-width: 768px) {
+	.about-section {
+		grid-template-columns: 1fr;
+	}
+}
