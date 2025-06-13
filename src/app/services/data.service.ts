@@ -32,4 +32,9 @@ export class DataService {
   getFooterData(): Observable<any> {
     return this.http.get('/assets/data/footer.json');
   }
+
+  getTechnologyData(): Observable<any> {
+    return this.http.get('/assets/data/technologies.json');
+  }
 }
+

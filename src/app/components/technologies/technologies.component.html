@@ -1,0 +1,11 @@
+<div class="container technology-tab">
+    <div class="title">
+        {{technologies.header}}
+    </div>
+    <div class="image-box">
+        <div *ngFor="let image of technologies.images">
+
+            <img [src]="image.src" [alt]="image.alt">
+        </div>
+    </div>
+</div>

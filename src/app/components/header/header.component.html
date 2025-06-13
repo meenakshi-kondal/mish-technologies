@@ -18,6 +18,12 @@
             <li class="item"><a href="#project" class="link" (click)="closeMenu()">Contact</a></li>
           </ul>
         </nav>
+
+        <div 
+        class="overlay" 
+        [class.active]="menuOpen" 
+        (click)="closeMenu()"
+      ></div>
       </div>
     </div>
   </header>

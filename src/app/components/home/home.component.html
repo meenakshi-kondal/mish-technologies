@@ -1,26 +1,35 @@
 <div class="home-background ">
-	<div class="right-circle"></div>
-	<div class="left-circle"></div>
 	<div class="content">
-		<div class="main">{{homeProfile.company_name}}</div>
-		<div class="description">
+		<div class="main">{{homeProfile.tagline}}</div>
+		<div class="ideas" *ngIf="homeProfile?.ideas?.length">
+			{{ homeProfile.ideas[currentIndex] }}
+		</div>
+		<div class="description stroke-content">
 			{{homeProfile.description}}
 		</div>
-		<div class="tagline" *ngIf="homeProfile?.taglines?.length">
-			{{ homeProfile.taglines[currentIndex] }}
-		</div>
+
+		<div class="frames">
+			<button class="btn primary">
+				<span>
+					{{homeProfile.action}}
+				</span>
+				<span>
+
 		
-		  
-		<button class="btn-primary">
-			{{homeProfile.action}}
-		</button>
+				<svg width="20px" height="20px" viewBox="0 0 66 43" xmlns="http://www.w3.org/2000/svg">
+					<g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						<path class="one" d="M40.1543937,3.16149988 L63.7267314,21.1501375 L40.1543937,39.1387751"
+							stroke="var(--border-color)" stroke-width="6" />
+						<path class="two" d="M24.1543937,3.16149988 L47.7267314,21.1501375 L24.1543937,39.1387751"
+							stroke="var(--border-color)" stroke-width="6" />
+						<path class="three" d="M8.15439375,3.16149988 L31.7267314,21.1501375 L8.15439375,39.1387751"
+							stroke="var(--border-color)" stroke-width="6" />
+					</g>
+				</svg>
+			</span>
+			</button>
+		</div>
+
 	</div>
 
-	<div class="grid-patch">
-		<div 
-		*ngFor="let dot of square; let i = index" 
-		class="square" 
-		>
-	  </div>
-	  </div>
 </div>

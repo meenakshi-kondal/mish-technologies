@@ -1,40 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
 
 :root {
-    --primary-color: #2C3E50;
-    --accent-color: #FF6F61;
-    --secondary-color: #1ABC9C;
-    --background-color: #F8F9FA;
-    --text-color: #333333;
-    --highlight-color: #F1C40F;
+    --background-color: #0F0F0F;
+    --primary-color: #FFCC00;
+    --hover-color: #F1BB30;
+    --border-color: #2E2E2E;
+    --text-color: #EAEAEA;
     --font-hedaing: 'Poppins', sans-serif;
     --font-body: 'Open Sans', sans-serif;
-    --medium-text:25px;
+    --medium-text: 25px;
 }
 
 body {
     margin: 0;
     padding: 0;
     font-family: var(--font-body);
-    // overflow: hidden;    
 
 }
+
 .container {
-    padding:30px;
+    padding: 30px;
 }
 
-.btn-primary {
-    background-color: var(--accent-color);
-    color:white;
-    padding:10px 20px;
+.btn {
+    padding: 10px 20px;
     border: none;
-    border-radius:8px;
+    border-radius: 8px;
     font-family: var(--font-hedaing);
     transition: background-color 0.3s ease;
-    font-size:var(--medium-text);
-    font-weight:600;
+    font-size: var(--medium-text);
+    font-weight: 600;
 }
-.btn-primary:hover {
-    background-color: var(--secondary-color);
+
+.primary {
+    background-color: var(--primary-color);
+    color: var(--border-color);
 }
+
+.secondary {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+.primary:hover {
+    background-color: var(--background-color);
+    color: white;
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 7px var(--primary-color), 0 0 12px var(--primary-color);
+    transition: box-shadow 0s ease;
+}
+
+.secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: 1px solid var(--background-color);
+    box-shadow: 0 0 10px var(--background-color), 0 0 15px var(--background-color);
+    transition: box-shadow 0s ease;
+}
+
+.stroke-content {
+    -webkit-text-stroke: 1px var(--text-color);
+    color: var(--background-color) !important;
+
+}
+
+// mobile responsive
+@media (max-width: 768px) {
+    .container {
+      padding: 20px 25px !important;
+    }
+  }

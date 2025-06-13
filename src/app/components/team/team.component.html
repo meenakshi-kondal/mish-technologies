@@ -1,34 +1,27 @@
 <div class="container team-tab">
     <div class="header">{{teamData.title}}</div>
-    <div class="vertical-watermark left">HIRE US</div>
+    <div class="stroke-content tagline">{{teamData.tagline}}</div>
+    <div class="vertical-watermark left"> {{teamData.watermark}}</div>
+    <div class="vertical-watermark right">{{teamData.watermark}}</div>
 
-    <div class="vertical-watermark right">HIRE US</div>
     <div class="tab-data">
+
+
         <div *ngFor="let members of teamData.members;" class="tab">
+            <div class="circle">
+                <img [src]="members.image" alt="service-images">
 
-            <div class="box medium">
-                <div class="tab-images">
-
-                    <img [src]="members.image" alt="service-images">
-                </div>
             </div>
-
-            <div class="box large">
+            <div class="box">
                 <div class="name">
                     {{members.name}}
                 </div>
-               
                 <div class="designation">
                     {{members.designation}}
                 </div>
-               
                 <div class="content">
                     {{members.content}}
                 </div>
-
-            </div>
-            <div class="box small">
-                {{members.designation}}
             </div>
         </div>
     </div>

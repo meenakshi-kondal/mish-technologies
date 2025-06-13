@@ -10,8 +10,8 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeComponent implements OnInit, OnDestroy {
   homeProfile: HOME_PROFILE = {
-    company_name: '',
-    taglines: [],
+    tagline: '',
+    ideas: [],
     action: '',
     description:''
   };
@@ -25,14 +25,14 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.dataService.getHomeData().subscribe(data => {
       this.homeProfile = data;
     });
-    if (this.homeProfile?.taglines?.length) {
+    if (this.homeProfile?.ideas?.length) {
       this.startTaglineLoop();
     }
   }
 
   startTaglineLoop() {
     this.intervalId = setInterval(() => {
-      this.currentIndex = (this.currentIndex + 1) % this.homeProfile.taglines.length;
+      this.currentIndex = (this.currentIndex + 1) % this.homeProfile.ideas.length;
     }, 3000);
   }
 

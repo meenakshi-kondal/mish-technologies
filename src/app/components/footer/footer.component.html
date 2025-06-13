@@ -1,32 +1,27 @@
 <div class="container footer">
-    <div class="section">
-        <div class="company-name">
-            <div>{{footerData.title}}</div>
-            <div>{{footerData.slogan}}</div>
-        </div>
+	<div class="section">
+		<div class="company-name">
+			<div>{{footerData.title}}</div>
+			<div>{{footerData.slogan}}</div>
+		</div>
+
+		<div class="quick_link">
+			<div *ngFor="let links of footerData.quick_links;" class="links"><a [href]="links.path">{{links.name}}</a></div>
+
+		</div>
+
+		<div class="social_media">
+			<div *ngFor="let links of footerData.social_media;">
+				<a [routerLink]="links.path"><i [class]="links.icon"></i></a>
+			</div>
+
+		</div>
+	</div>
 
 
-        <div class="tagline">
-            <p>{{footerData.tagline}}</p>
-        </div>
+	<div class="footer-bottom">
 
-        <div class="links">
-            <div *ngFor="let links of footerData.quick_links;">
-                <a [routerLink]="links.path">{{ links.name }}</a>
-            </div>
-        </div>
-
-    </div>
-
-
-    <div class="footer-bottom">
-
-        <div class="social_media">
-            <div *ngFor="let links of footerData.social_media;">
-                <a [routerLink]="links.path"><i [class]="links.icon"></i></a>
-            </div>
-        </div>
-        <div>{{footerData.copyright}}</div>
-    </div>
+		{{footerData.copyright}}
+	</div>
 
 </div>

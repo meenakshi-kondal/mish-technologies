@@ -12,7 +12,9 @@ import { NgFor } from '@angular/common';
 export class TeamComponent {
   teamData:TEAM_DATA={
     title:'',
-    members:[]
+    members:[],
+    watermark:'',
+    tagline:''
   }
   constructor(private dataService: DataService) { }
 

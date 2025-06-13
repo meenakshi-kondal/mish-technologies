@@ -1,39 +1,32 @@
 <div class="container">
-    <div class="left-box"></div>
-    <div class="about-us ">
-        <div class="content">
-            <h1>
-                {{aboutSection.header}}
-            </h1>
-            <div *ngFor="let content of aboutSection.content;" class="description">
-                {{content}}
-            </div>
-        </div>
-        <div class="layout">
-            <div class="circle-container">
-                <div class="circle circle1"></div>
-                <div class="circle circle2"></div>
-                <div class="circle circle3"></div>
-                <img src="assets/images/about.png" alt="Center Image" class="center-image">
-            </div>
-        </div>
-    </div>
-    <div class="about-us">
-        <div class="circle-container">
-            <img src="assets/images/team.png" alt="Center Image" class="center-image">
-        </div>
-      
-            <div class="right-box box-1"></div>
-            <div class="right-box box-2"></div>
-            <div class="right-box box-3"></div>
-   
-       
-        <div class="content second">
-            <div *ngFor="let content of aboutSection.action; let isLast = last" class="description"
-                [ngClass]="isLast ? 'description highlight' : 'first'">
-                {{content}}
-            </div>
-            <button class="btn-primary">{{aboutSection.button}}</button>
-        </div>
-    </div>
+	<div class="title">
+		{{aboutSection.header}}
+	</div>
+	<div class="about-us">
+		<div class="content">
+			<div *ngFor="let content of aboutSection.content;" class="description">
+				{{content}}
+			</div>
+		</div>
+		<div class="layout">
+			<div class="circle-container">
+				<div class="circle circle1"></div>
+				<div class="circle circle2"></div>
+				<div class="circle circle3"></div>
+				<img src="assets/images/about.png" alt="Center Image" class="center-image">
+			</div>
+		</div>
+	</div>
+	
+	<div class="about-us second">
+
+		<img src="assets/images/team.png" alt="Center Image" class="team">
+
+		<div class="content">
+			<div *ngFor="let content of aboutSection.action; let isLast = last" class="description"
+				[ngClass]="isLast ? 'description highlight' : 'first'">
+				{{content}}
+			</div>
+		</div>
+	</div>
 </div>

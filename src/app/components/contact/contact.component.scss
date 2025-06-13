@@ -1,109 +1,103 @@
-.contact-tab {
-	height: 90vh;
+.stretch-section {
+	background-color: var(--background-color);
+	color: var(--text-color);
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 
-	.top {
-		height: 40%;
-		background: linear-gradient(22deg, rgba(26, 188, 156, 0.89) 32%, rgba(255, 111, 97, 0.75) 56%);
-		position: relative;
+	.title {
+		font-weight: 600;
+		font-size: 3rem;
+	}
+
+	.content {
+		font-weight: 500;
+		padding: 0 15%;
 		text-align: center;
-		color: var(--text-color);
+		margin-top: 20px;
+	}
 
-		.title {
-			font-weight: 600;
-			font-size: 3rem;
+	.form-section {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 50px;
+		padding: 30px;
+		margin-top: 50px;
+		background-color: var(--primary-color);
+		border-radius: 10px;
+		overflow: hidden;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
-		}
 
-		.content {
-			font-weight: 500;
-			margin-top: 8px;
-			padding: 0 15%;
-		}
 
-		.form-section {
-			padding: 30px;
-			position: absolute;
-			top: 120%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			width: 80%;
-			max-width: 800px;
-			background-color: var(--background-color);
-			display: flex;
-			border-radius: 10px;
-			overflow: hidden;
-			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-			z-index: 10;
-			flex-wrap: wrap;
+		.image-section {
+			background-size: cover;
+			background-position: center;
 
-			.image-section {
-				flex: 0 0 43%;
-				background-size: cover;
-				background-position: center;
+			.image {
+				text-align: center;
 
 				img {
-					margin-right:50px;
-					background: linear-gradient(22deg, rgba(255, 111, 97, 0.75) 43%, rgba(26, 188, 156, 0.89) 56%);
+
+					background: var(--background-color);
 					border-radius: 50%;
 					padding: 10px;
 				}
-
-				.information {
-					display: flex;				
-					flex-wrap: wrap;
-					margin-top: 10px;
-					margin-left:10px;
-					word-break: break-word;
-					color: var(--text-color);
-					font-size: 15px;
-					align-items: center;
-
-					i {
-						font-size: 20px;
-						margin-right: 10px;
-						color: var(--accent-color);
-						padding: 6px;
-						border: 2px solid var(--secondary-color);
-						border-radius: 50%;
-						transition: transform 0.3s ease, color 0.3s, border 0.3s;
-					}
-
-					&:hover i {
-						color: var(--secondary-color);
-						border: 2px solid var(--accent-color);
-						transform: scale(1.2);
-					}
-				}
 			}
 
-			.tab {
-				flex: 1;
+			.information {
+				display: flex;
+				flex-wrap: wrap;
+				margin-top: 10px;
+				margin-left: 10px;
+				word-break: break-word;
+				color: var(--border-color);
+				font-size: 15px;
+				align-items: center;
 
-				form {
-					display: flex;
-					flex-direction: column;
+				i {
+					font-size: 20px;
+					margin-right: 10px;
+					color: var(--border-color);
+					padding: 6px;
+					border: 2px solid var(--border-color);
+					border-radius: 50%;
+					transition: transform 0.3s ease;
+				}
 
-
-					input,
-					textarea {
-						padding: 10px;
-						margin-bottom: 15px;
-						font-size: 16px;
-						border: 1px solid #ccc;
-						border-radius: 4px;
-					}
+				&:hover i {
+					transform: scale(1.2);
 				}
 			}
-
-
 		}
-	}
 
-	.bottom {
-		height: 50%;
-		background-color: #2C3E5029;
-		position: relative;
+		.tab {
+
+			form {
+				display: flex;
+				flex-direction: column;
+
+				input,
+				textarea {
+					padding: 10px;
+					margin-bottom: 15px;
+					font-size: 16px;
+					border: 1px solid var(--text-color);
+					border-radius: 4px;
+				}
+			}
+		}
+
+
+	}
+}
+
+// mobile responsive
+@media (max-width: 768px) {
+	.content {
+		padding:0% !important;
+	}
+	.form-section {
+		grid-template-columns: 1fr !important;
 	}
 }

@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { CONTACT_DATA } from '../../interface/data';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { NgFor } from '@angular/common';
+import {  NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-contact',
@@ -11,6 +11,8 @@ import { NgFor } from '@angular/common';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+
+
   contactSection: CONTACT_DATA = {
     title: '', content: '', contact: [], image: '', form: {
       name: '',
@@ -20,6 +22,9 @@ export class ContactComponent {
     }
   };
   contactForm: FormGroup;
+  stretchScale = 0.1; // start small
+
+  
 
   constructor(private dataService: DataService, private fb: FormBuilder) {
     this.contactForm = this.fb.group({
@@ -34,6 +39,7 @@ export class ContactComponent {
       this.contactSection = data;
     });
   }
+
 
   onSubmit(): void {
     if (this.contactForm.valid) {

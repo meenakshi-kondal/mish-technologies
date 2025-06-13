@@ -5,62 +5,31 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: rgba(0, 0, 0, 0.95);
-
-	.right-circle {
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 250px;
-		height: 250px;
-		background: var(--accent-color);
-		border-radius: 50%;
-		opacity: 0.1;
-		z-index: 0;
-		filter: blur(5px);
-	}
-
-	.left-circle {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 250px;
-		height: 250px;
-		background: var(--secondary-color);
-		border-radius: 50%;
-		opacity: 0.1;
-		z-index: 0;
-		filter: blur(3px);
-		animation: growShrinkGlow 4s ease-in-out infinite;
-	}
+	background-color: var(--background-color);
 
 	.content {
 		text-align: center;
 		width: 80%;
 		height: 80%;
-		line-height: 1.8;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
 
 		.description {
-			font-size: 1.2rem;
-			color: white;
+			font-size: 1.3rem;
 		}
 
 		.main {
-			font-size: 6rem;
-			font-family: 'Orbitron', sans-serif;
+			font-size: 3rem;
+			font-weight: 800;
 			transition: color 2s ease-in-out;
 			text-transform: uppercase;
-			color: var(--secondary-color);
-
+			color: var(--text-color);
 		}
 
-		.btn-primary {
-			margin-top: 20px;
-		}
-
-		.tagline {
-			margin-top: 20px;
-			color: var(--accent-color);
+		.ideas {
+			color: var(--primary-color);
 			font-size: 3rem;
 			text-align: center;
 			transition: opacity 0.5s ease-in-out;
@@ -72,80 +41,116 @@
 		@keyframes slideUp {
 			0% {
 				transform: translateY(100%);
-				/* Start from below the container */
 				opacity: 0;
 			}
 
 			10% {
 				transform: translateY(0);
-				/* Move to the center */
 				opacity: 1;
 			}
 
 			80% {
 				transform: translateY(0);
-				/* Stay in the center */
 				opacity: 1;
 			}
 
 			100% {
 				transform: translateY(-100%);
-				/* Slide to the top */
 				opacity: 0;
 			}
 		}
+
+		.frames {
+			width: fit-content;
+
+			.primary {
+				width: fit-content;
+				transition: 1s;
+				box-shadow: 6px 6px 0 black;
+				transform: skewX(-15deg);
+
+				span {
+					transform: skewX(15deg);
+				}
+
+			}
+
+			.primary:hover span:nth-child(2) {
+				transition: 0.5s;
+				margin-right: 45px;
+			}
+
+			path.one {
+				transition: 0.4s;
+				transform: translateX(-60%);
+			}
+
+			path.two {
+				transition: 0.5s;
+				transform: translateX(-30%);
+			}
+
+			.primary:hover path.three {
+				animation: color_anim 1s infinite 0.2s;
+			}
+
+			.primary:hover path.one {
+				transform: translateX(0%);
+				animation: color_anim 1s infinite 0.6s;
+			}
+
+			.primary:hover path.two {
+				transform: translateX(0%);
+				animation: color_anim 1s infinite 0.4s;
+			}
+
+		}
 	}
-
-	.grid-patch {
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 120px;
-		height: 100%;
-		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		grid-auto-rows: 10px;
-		grid-gap: 5px;
-		animation: bounceVertical 8s linear infinite alternate;
-		overflow: hidden;
-		padding: 2px;
-	  }
-  
-	  .square {
-		width: 10px;
-		height: 10px;
-		background-color: #1ABC9C33;
-	  }
-  
-	  @keyframes bounceVertical {
-		0% {
-		  top: 0;
-		}
-		100% {
-		  top: calc(100% - 180px); /* Adjust to match grid height inside container */
-		}
-	  }
-
 }
 
-@keyframes growShrinkGlow {
+@keyframes color_anim {
 	0% {
-		transform: scale(1);
-		opacity: 0.1;
-		box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+		fill: white;
 	}
 
 	50% {
-		transform: scale(1.2);
-		opacity: 0.1;
-		box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+		fill: #FBC638;
 	}
 
 	100% {
-		transform: scale(1);
-		opacity: 0.1;
-		box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+		fill: white;
 	}
 }
 
-  
+// mobile responsive
+@media (max-width: 768px) {
+	.home-background {
+		align-items: baseline !important;
+		height: fit-content;
+	}
+	.content {
+		justify-content: baseline;
+	}
+
+
+	.description {
+		margin-top:35px;
+		font-size: 1rem !important;
+	}
+
+	.main {
+		margin-top:35px;
+		font-size: 1.8rem !important;
+
+	}
+
+	.ideas {
+		margin-top:35px;
+		font-size: 1rem !important;
+	}
+	.frames {
+		margin-top:35px !important;
+		margin-bottom:20px !important;
+	}
+
+}

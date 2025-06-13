@@ -33,4 +33,5 @@ export class HeaderComponent {
       this.menuOpen = false;
     }, 50);
   }
+
 }

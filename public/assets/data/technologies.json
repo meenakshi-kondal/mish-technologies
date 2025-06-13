@@ -1,0 +1,24 @@
+{
+    "header": "Technologies we use",
+   "images": [
+  { "src": "assets/images/html.png", "alt": "HTML" },
+  { "src": "assets/images/css.png", "alt": "CSS" },
+  { "src": "assets/images/bootstrap.png", "alt": "Bootstrap" },
+  { "src": "assets/images/tailwind.png", "alt": "Tailwind CSS" },
+  { "src": "assets/images/js.png", "alt": "JavaScript" },
+  { "src": "assets/images/ts.png", "alt": "TypeScript" },
+  { "src": "assets/images/angular.png", "alt": "Angular" },
+  { "src": "assets/images/vue.png", "alt": "Vue.js" },
+  { "src": "assets/images/react.png", "alt": "React" },
+  { "src": "assets/images/node.png", "alt": "Node.js" },
+  { "src": "assets/images/express.png", "alt": "Express.js" },
+  { "src": "assets/images/socket.png", "alt": "Socket.io" },
+  { "src": "assets/images/mongodb.png", "alt": "MongoDB" },
+  { "src": "assets/images/mysql.png", "alt": "MySQL" },
+  { "src": "assets/images/postman.png", "alt": "Postman" },
+  { "src": "assets/images/github.png", "alt": "GitHub" },
+  { "src": "assets/images/gitlab.png", "alt": "GitLab" },
+  { "src": "assets/images/aws.png", "alt": "AWS" }
+]
+
+}

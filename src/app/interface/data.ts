@@ -1,6 +1,6 @@
 export interface HOME_PROFILE {
-    company_name: string;
-    taglines: string[];
+    tagline: string;
+    ideas: string[];
     action: string;
     description?: string;
 }
@@ -24,6 +24,8 @@ export interface SERVICE_DATA {
 
 export interface TEAM_DATA {
     title: string;
+    tagline: string;
+    watermark: string;
     members: {
         name: string;
         designation: string;
@@ -50,6 +52,11 @@ export interface FOOTER_DATA {
     slogan: string;
     quick_links: { name: string; path: string }[];
     social_media: { icon: string; path: string }[];
-    copyright:string;
-    tagline:string
+    copyright: string;
+    tagline: string
+}
+
+export interface TECHNOLOGY_DATA {
+    header: string;
+    images: { src: string; alt: string }[];
 }

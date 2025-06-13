@@ -1,55 +1,80 @@
 .footer {
-    background-color: rgba(0, 0, 0, 0.95);
-    color: white;
+	background-color: var(--background-color);
+	color: var(--text-color);
+	padding-bottom: 10px;
+	position: relative;
 
-    .section {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin-bottom: 20px;
+	.section {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-bottom: 20px;
+		align-items: center;
 
-        .tagline {
-            text-transform: uppercase;
-        }
+		.social_media {
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
-        .links a {
-            text-decoration: none;
-            color: white;
-            line-height: 1.5;
+			a {
+				margin: 5px;
+				color: var(--text-color);
 
-        }
+				i {
+					font-size: 20px;
+					padding: 5px;
+					border: 1px solid var(--text-color);
+					border-radius: 50%;
+				}
 
-        .links a:hover {
-            color: var(--accent-color);
-        }
+				i:hover {
+					color: var(--primary-color);
+					border: 1px solid var(--primary-color);
+				}
+			}
+		}
 
-    }
+		.quick_link {
+			display: flex;
+			list-style: none;
 
-    .footer-bottom {
-        border-top: 1px solid var(--text-color);
-        padding: 20px 0;
-        text-align: center;
-        font-size: 14px;
-        flex-wrap: wrap;
+			.links a {
+				align-items: center;
+				padding: 10px 20px;
+				text-decoration: none;
+				color: var(--text-color);
+				font-size: 18px;
+			}
 
-        .social_media {
-            display: flex;
-            justify-content: center;
-            margin-bottom:20px;
-            a {
-                margin:5px;
-              color:white;  
-              i {
-                font-size:20px;
-                padding:5px;
-                border:1px solid white;
-                border-radius: 50%;
-              }
-              i:hover {
-                color:var(--accent-color);
-                border:1px solid var(--accent-color);
-              }
-            }
-        }
-    }
+			.links a:hover {
+				color: var(--primary-color)
+			}
+		}
+	}
+
+	.footer-bottom {
+		border-top: 1px solid var(--border-color);
+		padding-top: 10px;
+		text-align: center;
+		font-size: 14px;
+		flex-wrap: wrap;
+	}
+}
+
+// mobile responsive
+@media (max-width: 768px) {
+	.section {
+		justify-content: center !important;
+	}
+
+	.links a {
+		padding: 10px 10px !important;
+		font-size: 16px !important;
+	}
+	.quick_link, .social_media{
+		margin-top:25px;
+	}
+	.company-name {
+		text-align: center;
+	}
 }

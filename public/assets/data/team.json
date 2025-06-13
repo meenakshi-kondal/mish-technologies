@@ -1,26 +1,25 @@
 {
-    "title":"Meet the Team",
-    "members":[
+    "title": "Meet the Team",
+    "tagline": "The Talent Engine That Drives Your Brand Forward",
+    "watermark": "HIRE US",
+    "members": [
         {
-            "name":"Manish Bhanot",
-            "designation":"MEAN Stack Developer",
-            "content":"Passionate and results-driven MEAN Stack Developer with hands-on experience designing, developing, and deploying full-stack web applications using MongoDB, Express.js, Angular, and Node.js. Proficient in building RESTful APIs, implementing scalable front-end interfaces, and integrating NoSQL databases. Strong understanding of JavaScript, TypeScript, and asynchronous programming. Adept at agile development, DevOps practices, and Git-based collaboration. Committed to delivering clean, efficient code and responsive, user-friendly web solutions that meet client and business goals.",
-            "image":"assets/images/manish.png"
-
+            "name": "Manish Bhanot",
+            "designation": "MEAN Stack Developer",
+            "content": "Experienced in building and deploying full-stack web apps using MongoDB, Express.js, Angular, and Node.js. Skilled in RESTful APIs, scalable front ends, and NoSQL integration. Proficient in JavaScript, TypeScript, and async programming. Familiar with Agile, DevOps, and Git workflows. Focused on clean code and responsive, user-friendly solutions.",
+            "image": "assets/images/manish.png"
         },
         {
-            "name":"Meenakshi Kaundal",
-            "designation":"Full Stack Developer",
-            "content":"Versatile and detail-oriented Full Stack Developer with a strong foundation in both front-end and back-end technologies. Proficient in building dynamic, responsive web applications using JavaScript, HTML, CSS, and modern frameworks like Angular, Vue.js, Node.js, and Express.js. Experienced with database systems such as MongoDB, MySQL. Skilled in developing RESTful APIs, integrating third-party services, and deploying applications using Git, and cloud platforms like AWS. Known for writing clean, maintainable code and collaborating effectively in agile development environments to deliver high-quality, user-focused solutions",
-             "image":"assets/images/meenakshi.png"
-
+            "name": "Meenakshi Kaundal",
+            "designation": "Full Stack Developer",
+            "content": "Experienced in front-end and back-end skills. Experienced in building responsive web apps using JavaScript, HTML, CSS, Angular, Vue.js, Node.js, and Express.js. Proficient in MongoDB, MySQL, RESTful APIs, and AWS deployment. Writes clean, maintainable code and collaborates well in agile teams to deliver user-focused solutions",
+            "image": "assets/images/meenakshi.png"
         },
         {
-            "name":"Rishve Bhanot",
-            "designation":"MERN Stack Developer",
-            "content":"Dynamic and highly skilled MERN Stack Developer with expertise in building robust and scalable web applications. Proficient in MongoDB for NoSQL database management, Express.js for server-side development, React for building dynamic front-end interfaces, and Node.js for efficient back-end functionality. Experienced in developing RESTful APIs, managing state using Redux, and integrating third-party APIs. Strong command of JavaScript, TypeScript, and modern front-end tools and libraries. Passionate about optimizing performance, ensuring responsive design, and delivering high-quality.",
-             "image":"assets/images/rishe.png"
-
+            "name": "Rishve Bhanot",
+            "designation": "MERN Stack Developer",
+            "content": "Experienced in building scalable web apps using MongoDB, Express.js, React, and Node.js. Proficient in RESTful APIs, Redux, and third-party integrations. Strong in JavaScript, TypeScript, and modern front-end tools. Focused on performance, responsiveness, and delivering quality solutions.",
+            "image": "assets/images/rishe.png"
         }
     ]
 }

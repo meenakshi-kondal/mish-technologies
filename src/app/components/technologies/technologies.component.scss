@@ -1,0 +1,43 @@
+.technology-tab {
+	background-color: var(--background-color);
+	color: var(--text-color);
+
+	.title {
+		font-size: 3rem;
+		font-weight: 600;
+		text-align: center;
+	}
+
+	.image-box {
+		display: flex;
+		gap: 28px;
+		flex-wrap: wrap;
+		width: 75%;
+		margin: 0 auto;
+		margin-top: 40px;
+
+		div {
+			position: relative;
+			border-radius: 8px;
+			overflow: hidden; 
+			
+			img {
+				width: 160px;
+				height: 110px;
+				object-fit: contain;
+				position: relative;
+				border-radius: 8px;
+				transition: transform 0.3s ease, filter 0.3s ease;
+		
+			}
+
+			&::before {
+				display: none;
+			}
+
+			&:hover img {
+				transform: scale(1.2);
+			}
+		}
+	}
+}
