@@ -3,18 +3,17 @@
 
 	.title {
 		text-align: center;
-		color: var(--text-color);
+		color:var(--primary-color);
 		font-size: 3rem;
 		font-weight: 600;
 	}
 
 	.about-us {
 		margin: auto;
-		margin-top: 30px;
+		margin-top: 40px;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 30px;
-		max-width: 1200px;
 
 		.content {
 			height: fit-content;
@@ -25,7 +24,7 @@
 			justify-content: center;
 
 			.description {
-				font-size: 16px;
+				font-size: 18px;
 				line-height: 1.9;
 				color: var(--text-color);
 			}
@@ -46,7 +45,7 @@
 			inset: 0;
 			background: var(--primary-color);
 			opacity: 0.1;
-			filter: blur(30px);
+			filter: blur(10px);
 			z-index: 0;
 			border-radius: 12px;
 		}

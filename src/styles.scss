@@ -2,7 +2,7 @@
 
 :root {
     --background-color: #0F0F0F;
-    --primary-color: #FFCC00;
+    --primary-color: #b1dd40;
     --hover-color: #F1BB30;
     --border-color: #2E2E2E;
     --text-color: #EAEAEA;
@@ -15,11 +15,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: var(--font-body);
+    cursor: none;
+
 
 }
 
 .container {
-    padding: 30px;
+    padding: 50px 100px;
 }
 
 .btn {
@@ -38,8 +40,10 @@ body {
 }
 
 .secondary {
-    background-color: var(--background-color);
     color: var(--primary-color);
+    background: var(--background-color);
+    transition: background-position 0.4s ease;
+    background-size: 100% 200%;
 }
 
 .primary:hover {
@@ -50,13 +54,6 @@ body {
     transition: box-shadow 0s ease;
 }
 
-.secondary:hover {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    border: 1px solid var(--background-color);
-    box-shadow: 0 0 10px var(--background-color), 0 0 15px var(--background-color);
-    transition: box-shadow 0s ease;
-}
 
 .stroke-content {
     -webkit-text-stroke: 1px var(--text-color);
@@ -64,9 +61,10 @@ body {
 
 }
 
+
 // mobile responsive
 @media (max-width: 768px) {
     .container {
-      padding: 20px 25px !important;
+        padding: 20px 25px !important;
     }
-  }
+}
