@@ -38,6 +38,7 @@ export interface CONTACT_DATA {
     title: string;
     content: string;
     contact: { name: string; icon: string }[];
+    backgroundTitle: string;
     image: string;
     form: {
         name: string;
@@ -59,4 +60,32 @@ export interface FOOTER_DATA {
 export interface TECHNOLOGY_DATA {
     header: string;
     images: { src: string; alt: string }[];
+}
+
+export interface REVIEW_DATA {
+    header: string;
+    reviewItems: {
+        name: string;
+        image: { src: string; alt: string };
+        words: string;
+        rating: number;
+    }[]
+}
+
+export interface BRAND_DATA {
+    heading: string;
+    list: BRAND_LIST[];
+}
+interface BRAND_LIST {
+    title: string;
+    description: string;
+    icon: string;
+    image: string;
+}
+
+export interface GROWTH_DATA {
+    heading: string;
+    title: string;
+    tagline: string;
+    growth: { name: string; count: number; icon: string }[]
 }

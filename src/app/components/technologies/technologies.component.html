@@ -2,8 +2,8 @@
     <div class="title">
         {{technologies.header}}
     </div>
-    <div class="image-box">
-        <div *ngFor="let image of technologies.images">
+    <div class="image-box" >
+        <div *ngFor="let image of technologies.images; let i = index" [ngClass]="{'fade-in': visibleImages[i]}" #techBox>
 
             <img [src]="image.src" [alt]="image.alt">
         </div>

@@ -1,0 +1,29 @@
+<div class="container brand-page">
+    <div class="title">
+        {{brandData.heading}}
+    </div>
+
+    <div class="list">
+        <div class="tab" *ngFor="let list of brandData.list">
+
+            <i [class]="list.icon"></i>
+
+
+            <div class="content">
+                <div class="head">{{list.title}}</div>
+                <div class="description">{{list.description}}</div>
+            </div>
+
+
+            <div class="action">
+
+                <i class='bx bx-right-arrow-alt action'></i>
+            </div>
+
+
+            <img [src]="list.image" class="image" />
+        </div>
+    </div>
+
+
+</div>

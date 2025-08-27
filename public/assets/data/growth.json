@@ -1,0 +1,27 @@
+{
+    "heading": "We are growing",
+    "title": "Our Company Growth",
+    "tagline": "Shaping the Future of Growth",
+    "growth": [
+        {
+            "name": "Satisfied Client",
+            "count": 80,
+            "icon": "bx bx-pencil"
+        },
+        {
+            "name": "Days of Operation",
+            "count": 200,
+            "icon": "bx bx-time"
+        },
+        {
+            "name": "Complete Project",
+            "count": "66",
+            "icon": "bx bx-badge-check"
+        },
+        {
+            "name": "Award Winning",
+            "count": 25,
+            "icon": "bx bx-award"
+        }
+    ]
+}

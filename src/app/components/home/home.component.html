@@ -1,9 +1,11 @@
 <div class="home-background ">
 	<div class="content">
 		<div class="main">{{homeProfile.tagline}}</div>
-		<div class="ideas" *ngIf="homeProfile?.ideas?.length">
+
+		<div class="ideas" *ngIf="homeProfile?.ideas?.length" >
 			{{ homeProfile.ideas[currentIndex] }}
 		</div>
+	
 		<div class="description stroke-content">
 			{{homeProfile.description}}
 		</div>
@@ -15,18 +17,18 @@
 				</span>
 				<span>
 
-		
-				<svg width="20px" height="20px" viewBox="0 0 66 43" xmlns="http://www.w3.org/2000/svg">
-					<g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-						<path class="one" d="M40.1543937,3.16149988 L63.7267314,21.1501375 L40.1543937,39.1387751"
-							stroke="var(--border-color)" stroke-width="6" />
-						<path class="two" d="M24.1543937,3.16149988 L47.7267314,21.1501375 L24.1543937,39.1387751"
-							stroke="var(--border-color)" stroke-width="6" />
-						<path class="three" d="M8.15439375,3.16149988 L31.7267314,21.1501375 L8.15439375,39.1387751"
-							stroke="var(--border-color)" stroke-width="6" />
-					</g>
-				</svg>
-			</span>
+
+					<svg width="20px" height="20px" viewBox="0 0 66 43" xmlns="http://www.w3.org/2000/svg">
+						<g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<path class="one" d="M40.1543937,3.16149988 L63.7267314,21.1501375 L40.1543937,39.1387751"
+								stroke="var(--border-color)" stroke-width="6" />
+							<path class="two" d="M24.1543937,3.16149988 L47.7267314,21.1501375 L24.1543937,39.1387751"
+								stroke="var(--border-color)" stroke-width="6" />
+							<path class="three" d="M8.15439375,3.16149988 L31.7267314,21.1501375 L8.15439375,39.1387751"
+								stroke="var(--border-color)" stroke-width="6" />
+						</g>
+					</svg>
+				</span>
 			</button>
 		</div>
 

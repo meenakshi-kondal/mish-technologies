@@ -1,14 +1,30 @@
 {
-	"title": "mish-technologies",
+	"title": "mishTech",
 	"slogan": "Our Dreams",
 	"tagline": "Crafting powerful digital experiences that inspire, engage, and drive growth.",
 	"quick_links": [
 		{
-			"name": "About Us",
+			"name": "Home",
+			"path": ""
+		},
+		{
+			"name": "About",
 			"path": ""
 		},
 		{
 			"name": "Services",
+			"path": ""
+		},
+		{
+			"name": "Team",
+			"path": ""
+		},
+		{
+			"name": "Technologies",
+			"path": ""
+		},
+		{
+			"name": "Testimonials",
 			"path": ""
 		},
 		{

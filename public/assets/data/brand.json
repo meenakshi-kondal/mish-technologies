@@ -1,0 +1,29 @@
+{
+  "heading": "Why Mish The Best Solution ​For Your Brand?",
+  "list": [
+    {
+      "title": "Creative Excellence",
+      "description": "At Mish, creativity is not just a skill — it's our core philosophy. We believe in designing experiences that are bold, original, and emotionally resonant. Whether it's branding, content, or visuals, we push boundaries to create work that grabs attention and leaves a lasting impression on your audience.",
+      "icon": "bx bxs-bulb",
+      "image": "/assets/images/creative.png"
+    },
+    {
+      "title": "Data-Driven Strategies",
+      "description": "We combine creativity with intelligence by leveraging deep analytics and real-time insights to craft marketing strategies that perform. Every campaign is optimized through measurable KPIs to ensure your brand reaches the right people at the right time with maximum impact.",
+      "icon": "bx bxs-bar-chart-alt-2",
+      "image": "/assets/images/graph.png"
+    },
+    {
+      "title": "Passionate & Dedicated Team",
+      "description": "Our team is a powerhouse of energy, creativity, and commitment. With diverse expertise across design, tech, marketing, and strategy, each member brings relentless passion to every project. We work closely with our clients as true partners, ensuring your vision is realized with heart, precision, and hustle.",
+      "icon": "bx bxs-group",
+      "image": "/assets/images/dedicate_team.png"
+    },
+    {
+      "title": "Full-Service Solutions",
+      "description": "From concept to execution, Mish provides end-to-end services tailored to your business needs. Whether you're launching a brand, revamping your website, running ad campaigns, or building a digital ecosystem — we’ve got the talent, tools, and technology to make it happen under one roof.",
+      "icon": "bx bxs-layer",
+      "image": "/assets/images/full_service.png"
+    }
+  ]
+}

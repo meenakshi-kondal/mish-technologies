@@ -4,7 +4,7 @@
   z-index: 10000;
   background-color: var(--background-color);
   box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
-
+  cursor: default;
 
   .container {
     margin: auto;
@@ -51,7 +51,9 @@
       .nav {
         display: flex;
         justify-content: center;
-
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
         flex-grow: 1;
 
         .list {
@@ -65,7 +67,7 @@
             padding: 10px 20px;
             text-decoration: none;
             color: var(--text-color);
-            font-size: 18px;
+            font-size: 20px;
 
           }
 

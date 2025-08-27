@@ -1,0 +1,114 @@
+.review-tab {
+    background-color: var(--background-color);
+
+    .heading {
+        font-size: 3rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        text-align: center;
+    }
+
+    .center-divs {
+        display: flex;
+        justify-content: center;
+        margin: 60px 0;
+
+
+        .carousel-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin: 20px;
+
+
+            .arrow-button {
+                background: var(--primary-color);
+                color: var(--background-color);
+                border: none;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                font-size: 20px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+                user-select: none;
+            }
+
+            .divs-container {
+                display: flex;
+                align-items: center;
+                transition: all 0.3s ease;
+                gap: 30px;
+            }
+
+            .card {
+                background: var(--primary-color);
+                border-radius: 8px;
+                height: fit-content;
+                max-height: 700px;
+                display: flex;
+                font-size: 18px;
+                transition: all 0.3s ease;
+                box-shadow: 0 0 20px 15px var(--primary-color);
+            }
+
+            .small-div {
+                width: 400px;
+                opacity: 0.7;
+                transform: scale(0.8);
+                cursor: pointer;
+            }
+
+            .small-div:hover {
+                opacity: 0.9;
+                transform: scale(0.85);
+            }
+
+            .large-div {
+                width: 400px;
+                transform: scale(1);
+            }
+
+            .div-content {
+                text-align: center;
+                color: var(--border-color);
+                ;
+                padding: 20px;
+
+                img {
+                    width: 100px;
+                }
+
+                .title {
+                    font-size: 18px;
+                    font-weight: 600;
+                    margin-top: 10px;
+                }
+
+                .stars {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 10px;
+
+                    .star {
+                        font-size: 40px;
+                    }
+
+                }
+
+                .content {
+                    margin-top: 10px;
+                    font-size: 16px;
+                    line-height: 1.8;
+                }
+
+            }
+
+
+        }
+    }
+}

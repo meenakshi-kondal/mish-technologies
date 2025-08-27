@@ -1,0 +1,33 @@
+{
+    "header": "TESTIMONIALS",
+    "reviewItems":
+    [
+        {
+            "name": "Albert",
+            "rating": 4,
+            "words": "Their team understood our vision perfectly and delivered a solution that was not only functional but scalable. Truly impressed! Excellent service, timely delivery, and great communication. A dependable IT partner we can count on. They helped us modernize our legacy systems without disrupting operations. Their approach was strategic, well-structured, and executed with care. We now have a faster, more secure infrastructure.",
+            "image": {
+                "src": "assets/images/manish.png",
+                "alt": "image_1"
+            }
+        },
+        {
+            "name": "Nick",
+            "rating": 5,
+            "words": "They handled our project with professionalism and deep technical know-how. Highly recommended for any IT development needs. From project kickoff to deployment, the experience was smooth and efficient. We’re extremely satisfied with their work. Our mobile app was developed and launched successfully thanks to the skilled team at [Your Company Name]. Their UI/UX suggestions significantly improved our user retention.",
+            "image": {
+                "src": "assets/images/meenakshi.png",
+                "alt": "image_2"
+            }
+        },
+        {
+            "name": "Meon",
+            "rating": 5,
+            "words": "Working with you has been a seamless experience. Their technical expertise, especially in web development and system integration, exceeded our expectations. The team was highly responsive, understood our requirements in depth, and delivered a robust solution on time. We appreciate their professionalism, problem-solving attitude, and the ongoing support they provide.",
+            "image": {
+                "src": "assets/images/rishe.png",
+                "alt": "image_3"
+            }
+        }
+    ]
+}

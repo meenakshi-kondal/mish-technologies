@@ -1,30 +1,29 @@
 <header class="header">
-    <div class="container">
-      <div class="content">
-        <div class="logo">
-          <!-- <h1>mish-technologies</h1> -->
-           <h1>losep leum</h1>
-        </div>
-  
-        <!-- Burger Menu for Mobile -->
-        <div class="burger" (click)="toggleMenu()">
-          ☰
-        </div>
-  
-        <!-- Nav Menu -->
-        <nav class="nav" [ngClass]="{'active': menuOpen}">
-          <ul class="list">
-            <li class="item"><a href="#about" class="link" (click)="closeMenu()">About</a></li>
-            <li class="item"><a href="#skill" class="link" (click)="closeMenu()">Services</a></li>
-            <li class="item"><a href="#project" class="link" (click)="closeMenu()">Contact</a></li>
-          </ul>
-        </nav>
-
-        <div 
-        class="overlay" 
-        [class.active]="menuOpen" 
-        (click)="closeMenu()"
-      ></div>
+  <div class="container">
+    <div class="content">
+      <div class="logo">
+        <h1>mishTech</h1>
       </div>
+
+      <!-- Burger Menu for Mobile -->
+      <div class="burger" (click)="toggleMenu()">
+        ☰
+      </div>
+
+      <!-- Nav Menu -->
+      <nav class="nav" [ngClass]="{'active': menuOpen}">
+        <ul class="list">
+          <li class="item"><a href="#about" class="link" (click)="closeMenu()">About</a></li>
+          <li class="item"><a href="#skill" class="link" (click)="closeMenu()">Services</a></li>
+          <li class="item"><a href="#project" class="link" (click)="closeMenu()">Technologies</a></li>
+          <li class="item"><a href="#about" class="link" (click)="closeMenu()">Team</a></li>
+          <li class="item"><a href="#skill" class="link" (click)="closeMenu()">Growth</a></li>
+          <li class="item"><a href="#project" class="link" (click)="closeMenu()">Testimonials</a></li>
+          <li class="item"><a href="#project" class="link" (click)="closeMenu()">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="overlay" [class.active]="menuOpen" (click)="closeMenu()"></div>
     </div>
-  </header>
+  </div>
+</header>

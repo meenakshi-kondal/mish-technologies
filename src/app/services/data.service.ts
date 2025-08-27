@@ -36,5 +36,22 @@ export class DataService {
   getTechnologyData(): Observable<any> {
     return this.http.get('/assets/data/technologies.json');
   }
+
+  getReviewData(): Observable<any> {
+    return this.http.get('/assets/data/review.json');
+  }
+
+  getTaglineData(): Observable<any> {
+    return this.http.get('/assets/data/taglineBlock.json');
+  }
+  
+  getBrandData(): Observable<any> {
+    return this.http.get('/assets/data/brand.json');
+  }
+
+  getGrowthData(): Observable<any> {
+    return this.http.get('/assets/data/growth.json');
+  }
+
 }
 

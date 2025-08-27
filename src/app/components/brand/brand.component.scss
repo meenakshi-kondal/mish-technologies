@@ -1,0 +1,76 @@
+.brand-page {
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+    .title {
+        color: var(--primary-color);
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 600;
+    }
+
+    .list {
+        margin-top: 60px;
+
+        .tab {
+            display: flex;
+            margin-top: 10px;
+            border-style: solid;
+            border-width: 0px 0px 1px;
+            border-color: #524b4ba6;
+            padding: 20px 0;
+            gap: 50px;
+
+            &:hover {
+                .image {
+                    opacity: 1;
+                    transform: translateX(0); // Add transform if you want animation
+                    transition: all 0.4s ease;
+                }
+            }
+
+
+            .image {
+                width: 25%;
+                opacity: 0;
+
+            }
+
+            .content {
+                font-size: 18px;
+                line-height: 1.9;
+                padding: 0 20px;
+                .head {
+                    font-weight: 600;
+                }
+            }
+
+            i {
+                font-size: 3em;
+
+            }
+
+            .action {
+                padding: 12px;
+
+                i {
+                    font-size: 3rem;
+                    background-color: var(--primary-color);
+                    border: 1px solid black;
+                    color: black;
+                    border-radius: 50%;
+                    transform: rotate(-40deg);
+                }
+
+                &:hover {
+                    i {
+                        border: 2px solid var(--primary-color);
+                        background-color: var(--background-color);
+                        color: var(--text-color)
+                    }
+                }
+            }
+        }
+
+    }
+}

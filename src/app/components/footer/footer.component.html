@@ -13,11 +13,11 @@
 		</div>
 
 		<div class="social_media">
-			<div *ngFor="let links of footerData.social_media;">
-				<a [routerLink]="links.path"><i [class]="links.icon"></i></a>
-			</div>
-
+			<a *ngFor="let links of footerData.social_media" [routerLink]="links.path">
+				<i [class]="links.icon"></i>
+			</a>
 		</div>
+
 	</div>
 
 
@@ -26,3 +26,4 @@
 		{{footerData.copyright}}
 	</div>
 </div>
+

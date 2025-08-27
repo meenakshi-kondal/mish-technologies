@@ -8,6 +8,10 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from "./components/footer/footer.component";
 import { TechnologiesComponent } from './components/technologies/technologies.component';
 import { LazyLoadObserverDirective } from './directives/lazy-load-observer.directive';
+import { ReviewComponent } from './components/review/review.component';
+import { TaglineBlockComponent } from './components/tagline-block/tagline-block.component';
+import { BrandComponent } from './components/brand/brand.component';
+import { GrowthComponent } from './components/growth/growth.component';
 
 @Component({
   selector: 'app-root',
@@ -28,6 +32,10 @@ export class AppComponent {
   technologies = TechnologiesComponent;
   contact = ContactComponent;
   footer = FooterComponent;
+  review = ReviewComponent;
+  taglineBlock = TaglineBlockComponent;
+  brand = BrandComponent;
+  growth = GrowthComponent;
 
   @ViewChild('customCursor') cursorRef!: ElementRef;
   @ViewChild('cursorDot') dotRef!: ElementRef;
