@@ -1,27 +1,27 @@
-<div class="review-tab container">
-	<div class="heading">{{carouselItems.header}}</div>
-	<div class="center-divs">
-		<div class="carousel-container">
+<div class="container review-tab">
 
-			<button class="arrow-button" (click)="moveLeft()">‹</button>
-
-			<div class="divs-container">
-				<div *ngFor="let item of visibleItems; let i = index" class="card"
-					[class]="isActive(i) ? 'large-div' : 'small-div'" [attr.data-index]="i">
-					<div class="div-content">
-						<img [src]="item.image.src">
-						<div class="title">{{ item.name }}</div>
-						<div class="stars">
-
-							<div class="star" *ngFor="let star of getStarsArray(item.rating)">★</div>
-						</div>
-						<div class="content">{{ item.words }}</div>
-					</div>
-				</div>
+	<div class="testimonial-section">
+		<span class="heading">{{testimonials.header}}</span>
+	</div>
+	<div class="marquee-container">
+		<div #marqueeRow1 class="marquee-row">
+			<div class="card" *ngFor="let tab of getLoopedItems(testimonials.reviewItems, 20)">
+				<img [src]="tab.image.src" [alt]="tab.image.alt">
+				<div class="name">{{ tab.name }}</div>
+				<div class="description">{{ tab.words }}</div>
 			</div>
-
-
-			<button class="arrow-button" (click)="moveRight()">›</button>
 		</div>
 	</div>
+
+	<div class="marquee-container">
+		<div #marqueeRow2 class="marquee-row">
+			<div class="card" *ngFor="let tab of getLoopedItems(testimonials.reviewItems, 20)">
+				<img [src]="tab.image.src" [alt]="tab.image.alt">
+				<div class="name">{{ tab.name }}</div>
+				<div class="description">{{ tab.words }}</div>
+			</div>
+
+		</div>
+	</div>
+
 </div>

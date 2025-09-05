@@ -64,6 +64,7 @@ export interface TECHNOLOGY_DATA {
 
 export interface REVIEW_DATA {
     header: string;
+    tagline: string;
     reviewItems: {
         name: string;
         image: { src: string; alt: string };
