@@ -1,16 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { FOOTER_DATA } from '../../interface/data';
-import { NgFor } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
-  imports: [NgFor, RouterModule],
+  imports: [RouterModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
-export class FooterComponent {
+export class FooterComponent implements OnInit {
   footerData: FOOTER_DATA = {
     title: '',
     slogan:'',
@@ -19,8 +18,9 @@ export class FooterComponent {
     copyright:'',
     tagline:''
   }
-  constructor(private dataService: DataService) { }
+  private dataService = inject(DataService);
 
+  
   ngOnInit() {
     this.dataService.getFooterData().subscribe(data => {
       this.footerData = data;

@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import { Component, ElementRef, inject, OnDestroy, OnInit, Renderer2 } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { HOME_PROFILE } from '../../interface/data';
 import { CommonModule } from '@angular/common';
@@ -18,11 +18,14 @@ export class HomeComponent implements OnInit, OnDestroy {
     description: ''
   };
   currentIndex = 0;
+   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   intervalId: any;
   square = Array(25);
   isVisible = false;
 
-  constructor(private dataService: DataService, private el: ElementRef, private renderer: Renderer2) { }
+  private dataService = inject(DataService);
+  private el = inject(ElementRef);
+  private renderer = inject(Renderer2);
 
   ngOnInit() {
     this.dataService.getHomeData().subscribe(data => {

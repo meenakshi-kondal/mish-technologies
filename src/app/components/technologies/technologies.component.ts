@@ -1,55 +1,52 @@
-import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
+import { Component, ElementRef, inject, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { TECHNOLOGY_DATA } from '../../interface/data';
-import { CommonModule, NgClass, NgFor } from '@angular/common';
-
-
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-technologies',
-  imports: [NgFor, CommonModule, NgClass],
+  imports: [CommonModule],
   templateUrl: './technologies.component.html',
   styleUrl: './technologies.component.scss'
 })
-export class TechnologiesComponent {
-
-  @ViewChildren('techBox') techBoxes!: QueryList<ElementRef>;
+export class TechnologiesComponent implements OnInit {
 
   technologies: TECHNOLOGY_DATA = {
     header: '',
     images: []
   };
-  visibleImages: boolean[] = [];
-  private hasObserved = false;
 
-  constructor(private dataService: DataService) { }
+  visibleImages: boolean[] = [];
+
+  private dataService = inject(DataService);
+  private el = inject(ElementRef);
 
   ngOnInit() {
     this.dataService.getTechnologyData().subscribe(data => {
       this.technologies = data;
+      setTimeout(() => this.initObserver());
     });
   }
 
-  ngAfterViewChecked(): void {
+  initObserver() {
+    const boxes = this.el.nativeElement.querySelectorAll('.box');
 
-    if (!this.hasObserved && this.techBoxes.length > 0) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          } else {
-            entry.target.classList.remove('visible');
-          }
-        });
-      }, {
-        threshold: 0.4,
-        rootMargin: '0px 0px -100px 0px' // 👈 Start observing earlier (from bottom)
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const index = Number(
+            (entry.target as HTMLElement).dataset['index']
+          );
+
+          setTimeout(() => {
+            entry.target.classList.add('show');
+          }, index * 50);
+
+        }
       });
+    }, { threshold: 0.2 });
 
-
-
-      this.techBoxes.forEach(box => observer.observe(box.nativeElement));
-      this.hasObserved = true;
-    }
+    boxes.forEach((box: Element) => observer.observe(box));
   }
+
 }

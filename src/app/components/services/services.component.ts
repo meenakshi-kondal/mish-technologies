@@ -1,21 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { SERVICE_DATA } from '../../interface/data';
-import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-services',
-  imports: [NgFor],
   templateUrl: './services.component.html',
   styleUrl: './services.component.scss'
 })
-export class ServicesComponent {
+export class ServicesComponent implements OnInit {
   servicesData: SERVICE_DATA = {
     title: '',
     tagline:'',
     services: [],
   }
-  constructor(private dataService: DataService) { }
+  private dataService = inject(DataService);
 
   ngOnInit() {
     this.dataService.getServiceData().subscribe(data => {

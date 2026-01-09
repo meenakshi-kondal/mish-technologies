@@ -1,17 +1,15 @@
-import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
+import { Component, ElementRef, inject, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { ABOUT_DATA } from '../../interface/data';
-import { CommonModule, NgFor } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-about',
-  imports: [NgFor, CommonModule],
+  imports: [CommonModule],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })
-export class AboutComponent {
-  @ViewChildren('teamBox') teamBoxes!: QueryList<ElementRef>;
-  private hasObserved = false;
+export class AboutComponent implements OnInit {
 
   aboutSection: ABOUT_DATA = {
     header: '',
@@ -20,34 +18,29 @@ export class AboutComponent {
     button: ''
   }
 
-  constructor(private dataService: DataService) { }
+  private dataService = inject(DataService);
+  private el = inject(ElementRef);
 
   ngOnInit() {
     this.dataService.getAboutData().subscribe(data => {
       this.aboutSection = data;
+
+      setTimeout(() => this.initObserver());
     });
   }
 
-    ngAfterViewChecked(): void {
-     if (!this.hasObserved && this.teamBoxes.length > 0) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          } else {
-            entry.target.classList.remove('visible');
-          }
-        });
-      }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px' // 👈 Start observing earlier (from bottom)
+  initObserver() {
+    const boxes = this.el.nativeElement.querySelectorAll('.left-content-container');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
       });
+    }, { threshold: 0.5 });
 
-
-
-      this.teamBoxes.forEach(box => observer.observe(box.nativeElement));
-      this.hasObserved = true;
-    }
+    boxes.forEach((box: Element) => observer.observe(box));
   }
 
 

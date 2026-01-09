@@ -1,7 +1,6 @@
 .container {
 	background-color: var(--background-color);
 	background-image: url('/assets/images/background.png');
-	display: flex;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -9,77 +8,65 @@
 	position: relative;
 
 	.content-column {
-		flex: 2;
 
 		.title {
 			color: var(--primary-color);
 			font-size: 5rem;
 			font-weight: 600;
+			text-align: center;
 		}
 
-		.content {
-			height: fit-content;
-			overflow: hidden;
+		.about-box {
+			border: 1px solid #4c4c4c;
 			display: flex;
-			padding: 20px 0;
-			flex-direction: column;
-			justify-content: center;
-			padding-bottom: 40px;
+			margin-top: 20px;
 
-			.text-container {
-				margin-top: 25px;
-				font-size: 20px;
-				line-height: 1.9;
-				color: var(--text-color);
-				flex-wrap: wrap;
-				font-weight: 500;
-				opacity: 0;
-				transform: translateY(100px);
-				transition: all 0.6s ease-out;
+			.left-content {
+				flex: 1;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				border-right: 1px solid #4c4c4c;
 
-				&.visible {
-					transform: translatey(0);
+				.left-content-container {
+					width: 352px;
+					height: auto;
+					margin: 70px 0px 100px 200px;
+					opacity: 0;
+					transform: translateX(-50px);
+					transition: all 0.6s ease;
+
+					.content {
+						display: flex;
+						gap: 16px;
+						flex-direction: column;
+
+						.text-container {
+							line-height: 1.8em !important;
+							font-size: 16px !important;
+							font: normal normal normal 16px / 1.4em 'open sans', sans-serif;
+							color: var(--text-color);
+						}
+					}
+
+					.action-btn {
+						margin-top: 30px;
+					}
+				}
+
+				.left-content-container.show {
 					opacity: 1;
-				}
-
-				&:nth-child(0).visible {
-					transition-delay: 0s;
-				}
-
-				&:nth-child(1).visible {
-					transition-delay: 0.1s;
-				}
-
-				&:nth-child(2).visible {
-					transition-delay: 0.2s;
-				}
-
-				&:nth-child(3).visible {
-					transition-delay: 0.4s;
+					transform: translateX(0);
 				}
 			}
-		}
 
-
-		.action-btn {
-			margin-top: 30px;
-		}
-
-	}
-
-	.image-column {
-		flex: 1;
-		text-align: end;
-		padding: 20px;
-		display: flex;
-		justify-content: end;
-
-		img {
-			height: 80%;
-			width: 80%;
+			.image-column {
+				flex: 1;
+				display: flex;
+				justify-content: center;
+			}
 		}
 	}
-
 }
 
 

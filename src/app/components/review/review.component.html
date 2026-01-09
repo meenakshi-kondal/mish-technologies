@@ -5,21 +5,27 @@
 	</div>
 	<div class="marquee-container">
 		<div #marqueeRow1 class="marquee-row">
-			<div class="card" *ngFor="let tab of getLoopedItems(testimonials.reviewItems, 20)">
-				<img [src]="tab.image.src" [alt]="tab.image.alt">
-				<div class="name">{{ tab.name }}</div>
-				<div class="description">{{ tab.words }}</div>
-			</div>
+
+			@for (tab of getLoopedItems(testimonials.reviewItems, 20); track tab.name) {
+				<div class="card">
+					<img [src]="tab.image.src" [alt]="tab.image.alt">
+					<div class="name">{{ tab.name }}</div>
+					<div class="description">{{ tab.words }}</div>
+				</div>
+			}
 		</div>
 	</div>
 
 	<div class="marquee-container">
 		<div #marqueeRow2 class="marquee-row">
-			<div class="card" *ngFor="let tab of getLoopedItems(testimonials.reviewItems, 20)">
-				<img [src]="tab.image.src" [alt]="tab.image.alt">
-				<div class="name">{{ tab.name }}</div>
-				<div class="description">{{ tab.words }}</div>
-			</div>
+
+			@for (tab of getLoopedItems(testimonials.reviewItems, 20); track tab.name) {
+				<div class="card">
+					<img [src]="tab.image.src" [alt]="tab.image.alt">
+					<div class="name">{{ tab.name }}</div>
+					<div class="description">{{ tab.words }}</div>
+				</div>
+			}
 
 		</div>
 	</div>

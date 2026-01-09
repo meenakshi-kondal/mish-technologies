@@ -4,26 +4,23 @@
     </div>
 
     <div class="list">
-        <div class="tab" *ngFor="let list of brandData.list">
-
+        @for (list of brandData.list; track list.title) {
+        <div class="tab">
             <i [class]="list.icon"></i>
-
 
             <div class="content">
                 <div class="head">{{list.title}}</div>
                 <div class="description">{{list.description}}</div>
             </div>
 
-
             <div class="action">
 
                 <i class='bx bx-right-arrow-alt action'></i>
             </div>
 
-
-            <img [src]="list.image" class="image" />
+            <img [src]="list.image" class="image" alt="image" />
         </div>
+        }
     </div>
-
 
 </div>

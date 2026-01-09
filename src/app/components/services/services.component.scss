@@ -1,4 +1,4 @@
-.serice-tab {
+.service {
 	background-color: var(--background-color);
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -79,7 +79,7 @@
 }
 
 @media (max-width: 768px) {
-	.serice-tab {
+	.service {
 		grid-template-columns: 1fr !important;
 		padding-bottom: 30px !important;
 	}

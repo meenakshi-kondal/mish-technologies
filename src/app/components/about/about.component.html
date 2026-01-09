@@ -1,26 +1,35 @@
 <div class="container">
+
 	<div class="content-column">
 		<div class="title">
 			{{aboutSection.header}}
 		</div>
-		<div class="content">
-			<div *ngFor="let content of aboutSection.content;let i = index" class="text-container" #teamBox>
 
-				<div>
-					{{content}}
+		<div class="about-box">
+			<div class="left-content">
+				<div class="left-content-container">
+				<div class="content">
+					@for (content of aboutSection.content; track content) {
+						<div class="text-container">
+							{{content}}
+						</div>
+					}
+				</div>
+
+				<div class="action-btn">
+					<button class="btn primary">
+						{{aboutSection.button}}
+					</button>
+				</div>
 				</div>
 			</div>
+
+			<div class="image-column">
+				<img src="assets/images/about_us.png" alt="Center" class="team">
+
+			</div>
+
 		</div>
-
-		<div class="action-btn">
-			<button class="btn primary">
-				{{aboutSection.button}}
-			</button>
-		</div>
-
 	</div>
-	<div class="image-column">
-		<img src="assets/images/about_us.png" alt="Center Image" class="team">
 
-	</div>
 </div>

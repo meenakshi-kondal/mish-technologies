@@ -2,10 +2,12 @@
 	<div class="content">
 		<div class="main">{{homeProfile.tagline}}</div>
 
-		<div class="ideas" *ngIf="homeProfile?.ideas?.length" >
-			{{ homeProfile.ideas[currentIndex] }}
-		</div>
-	
+		@if (homeProfile.ideas.length) {
+			<div class="ideas">
+				{{ homeProfile.ideas[currentIndex] }}
+			</div>
+		}
+
 		<div class="description stroke-content">
 			{{homeProfile.description}}
 		</div>

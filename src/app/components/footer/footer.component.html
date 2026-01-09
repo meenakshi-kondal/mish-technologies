@@ -7,15 +7,19 @@
 		</div>
 
 		<div class="quick_link">
-			<div *ngFor="let links of footerData.quick_links;" class="links"><a [href]="links.path">{{links.name}}</a>
-			</div>
+			@for (links of footerData.quick_links; track links.name) {
+				<div class="links"><a [href]="links.path">{{links.name}}</a>
+				</div>
+			}
 
 		</div>
 
 		<div class="social_media">
-			<a *ngFor="let links of footerData.social_media" [routerLink]="links.path">
-				<i [class]="links.icon"></i>
-			</a>
+			@for (links of footerData.social_media; track links.path) {
+				<a [routerLink]="links.path">
+					<i [class]="links.icon"></i>
+				</a>
+			}
 		</div>
 
 	</div>

@@ -1,9 +1,8 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, PLATFORM_ID, ViewChild, AfterViewInit, inject } from '@angular/core';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AboutComponent } from './components/about/about.component';
 import { ServicesComponent } from './components/services/services.component';
-import { TeamComponent } from './components/team/team.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from "./components/footer/footer.component";
 import { TechnologiesComponent } from './components/technologies/technologies.component';
@@ -12,6 +11,7 @@ import { ReviewComponent } from './components/review/review.component';
 import { TaglineBlockComponent } from './components/tagline-block/tagline-block.component';
 import { BrandComponent } from './components/brand/brand.component';
 import { GrowthComponent } from './components/growth/growth.component';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -19,16 +19,14 @@ import { GrowthComponent } from './components/growth/growth.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
 
-
-  constructor() { }
+  private platformId = inject(PLATFORM_ID);
 
   header = HeaderComponent;
   home = HomeComponent;
   about = AboutComponent;
   services = ServicesComponent;
-  team = TeamComponent;
   technologies = TechnologiesComponent;
   contact = ContactComponent;
   footer = FooterComponent;
@@ -44,6 +42,11 @@ export class AppComponent {
   lastY = 0;
 
   ngAfterViewInit() {
+
+
+  if (!isPlatformBrowser(this.platformId)) {
+    return; // SSR stop
+  }
     document.addEventListener('mousemove', (e) => {
       const cursor = this.cursorRef.nativeElement;
       const dot = this.dotRef.nativeElement;

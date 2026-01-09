@@ -1,16 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { CONTACT_DATA } from '../../interface/data';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { NgFor } from '@angular/common';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
-  imports: [ReactiveFormsModule, NgFor],
+  imports: [ReactiveFormsModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit {
 
 
   contactSection: CONTACT_DATA = {
@@ -26,25 +25,22 @@ export class ContactComponent {
       action: '',
     }
   };
-  contactForm: FormGroup;
   stretchScale = 0.1; // start small
 
+  private dataService = inject(DataService);
+  private fb = inject(FormBuilder);
 
-
-  constructor(private dataService: DataService, private fb: FormBuilder) {
-    this.contactForm = this.fb.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      message: ['', Validators.required]
-    });
-  }
+  contactForm = this.fb.group({
+    name: ['', Validators.required],
+    email: ['', [Validators.required, Validators.email]],
+    message: ['', Validators.required]
+  });
 
   ngOnInit() {
     this.dataService.getContactData().subscribe(data => {
       this.contactSection = data;
     });
   }
-
 
   onSubmit(): void {
     if (this.contactForm.valid) {

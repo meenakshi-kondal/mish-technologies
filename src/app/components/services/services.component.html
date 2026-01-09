@@ -1,4 +1,4 @@
-<div class="container serice-tab">
+<div class="container service">
 
 
     <div class="left-column">
@@ -12,15 +12,17 @@
 
 
     <div class="right-content">
-        <div *ngFor="let service of servicesData.services;" class="tab">
+        @for (service of servicesData.services; track service.name) {
+            <div class="tab">
 
-            <div class="name">
-                {{service.name}}
-            </div>
-            <div class="description">
-                "{{service.content}}"
-            </div>
+                <div class="name">
+                    {{service.name}}
+                </div>
+                <div class="description">
+                    "{{service.content}}"
+                </div>
 
-        </div>
+            </div>
+        }
     </div>
 </div>

@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -7,8 +8,9 @@ import { Observable } from 'rxjs';
 })
 export class DataService {
 
-  constructor(private http: HttpClient) { }
+  private http = inject(HttpClient);
 
+  
   getHomeData(): Observable<any> {
     return this.http.get('/assets/data/home.json');
   }

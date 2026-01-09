@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 
 @Component({
@@ -7,9 +7,9 @@ import { DataService } from '../../services/data.service';
   templateUrl: './tagline-block.component.html',
   styleUrl: './tagline-block.component.scss'
 })
-export class TaglineBlockComponent {
+export class TaglineBlockComponent implements OnInit {
 
-  constructor(private dataService: DataService) { }
+  private dataService = inject(DataService);
 
   tagline = {text:''};
   ngOnInit() {

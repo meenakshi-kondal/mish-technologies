@@ -24,7 +24,7 @@
             &:hover {
                 .image {
                     opacity: 1;
-                    transform: translateX(0); // Add transform if you want animation
+                    transform: translateX(0);
                     transition: all 0.4s ease;
                 }
             }
@@ -40,9 +40,18 @@
                 font-size: 18px;
                 line-height: 1.9;
                 padding: 0 20px;
+                opacity: 0;
+                transform: translateY(40px);
+                transition: all 0.5s ease;
+
                 .head {
                     font-weight: 600;
                 }
+            }
+
+            .content.show {
+                opacity: 1;
+                transform: translateY(0);
             }
 
             i {

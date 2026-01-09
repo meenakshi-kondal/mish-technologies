@@ -6,12 +6,14 @@
     </div>
 
     <div class="growth">
-        <div class="card" *ngFor="let content of growthContent.growth;let i = index" #growthBox>
-            <i [class]="content.icon"></i>
-            <div class="number" [attr.data-count]="content.count">0
+        @for (content of growthContent.growth; track content.icon) {
+            <div class="card">
+                <i [class]="content.icon"></i>
+                <div class="number" [attr.data-count]="content.count">0
+                </div>
+                <div class="label">{{content.name}}</div>
             </div>
-            <div class="label">{{content.name}}</div>
-        </div>
+        }
     </div>
 
 

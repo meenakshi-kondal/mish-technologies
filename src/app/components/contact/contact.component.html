@@ -1,16 +1,22 @@
 <div class="stretch-section container">
+
 	<div class="background-title">{{contactSection.backgroundTitle}}</div>
 	<div class="title">{{contactSection.title}}</div>
+
 	<div class="form-section">
+
 		<div class="image-section">
 			<div class="image">
 
 				<img [src]="contactSection.image" alt="hello" width="100">
 			</div>
-			<div *ngFor="let contact of contactSection.contact;" class="information">
-				<i [class]="contact.icon"></i>
-				<div class="name">{{contact.name}}</div>
-			</div>
+
+			@for (contact of contactSection.contact; track contact.name) {
+				<div class="information">
+					<i [class]="contact.icon"></i>
+					<div class="name">{{contact.name}}</div>
+				</div>
+			}
 		</div>
 
 		<div class="tab">

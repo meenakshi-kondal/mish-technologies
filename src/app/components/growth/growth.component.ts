@@ -1,22 +1,25 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, OnInit, AfterViewInit, inject } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { GROWTH_DATA } from '../../interface/data';
-import { CommonModule, NgFor } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-growth',
-  imports: [NgFor, CommonModule],
+  imports: [CommonModule],
   templateUrl: './growth.component.html',
   styleUrl: './growth.component.scss'
 })
-export class GrowthComponent {
+export class GrowthComponent implements OnInit, AfterViewInit {
+
   growthContent: GROWTH_DATA = {
     heading: '',
     title: '',
     tagline: '',
     growth: []
   };
-  constructor(private dataService: DataService, private el: ElementRef) { }
+
+  private dataService = inject(DataService);
+  private el = inject(ElementRef);
 
   ngOnInit() {
     this.dataService.getGrowthData().subscribe(data => {
@@ -37,6 +40,7 @@ export class GrowthComponent {
         });
       }, { threshold: 0.5 });
 
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       cards.forEach((card: any) => observer.observe(card));
     }, 500);
   }
